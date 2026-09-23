@@ -1,0 +1,24 @@
+
+
+
+name: My First CI Pipeline
+
+on:
+push:
+branches:
+- main
+
+jobs:
+test-and-build:
+runs-on: ubuntu-latest
+
+steps:
+  - name: Check out repository code
+    uses: actions/checkout@v4
+
+  - name: Run a simple test script
+    run: |
+      echo "Starting automated CI process..."
+      echo "Checking system status..."
+      docker --version
+      echo "All checks passed successfully!"
