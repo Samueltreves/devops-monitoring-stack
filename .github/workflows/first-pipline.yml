@@ -1,6 +1,4 @@
 
-
-
 name: My First CI Pipeline
 
 on:
@@ -16,9 +14,11 @@ steps:
   - name: Check out repository code
     uses: actions/checkout@v4
 
-  - name: Run a simple test script
+  - name: Set up Docker Buildx
+    uses: docker/setup-buildx-action@v3
+
+  - name: Build Docker Image
     run: |
-      echo "Starting automated CI process..."
-      echo "Checking system status..."
-      docker --version
-      echo "All checks passed successfully!"
+      echo "Building Docker image automatically..."
+      docker build -t devops-monitoring-app:latest .
+      echo "Docker image built successfully!"
