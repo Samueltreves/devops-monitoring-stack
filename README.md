@@ -1,4 +1,3 @@
-## CI/CD Automated Build Test
 # 📊 DevOps Monitoring Stack with CI/CD Pipeline
 
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
